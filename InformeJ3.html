@@ -804,7 +804,7 @@
                 {
                         "number": "17",
                         "name": "Héctor",
-                        "rating": "-",
+                        "rating": "7,2",
                         "goals": 0,
                         "assists": 0,
                         "cards": "🟨"
@@ -1225,9 +1225,10 @@
         const formationContainer = document.getElementById('formation-container-final');
         formationContainer.innerHTML = '';
 
-        const formation = formationsFinal[formationKey] || formationsFinal['4-4-2'];
+        const formation = formationsFinal[formationKey] || formationsFinal['4-4-1'];
 
         formation.forEach(rowPlayers => {
+          if (!rowPlayers || rowPlayers.length === 0) return;
           const row = document.createElement('div');
           row.className = 'player-row-responsive';
 
