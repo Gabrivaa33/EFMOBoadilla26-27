@@ -856,12 +856,12 @@
         "comment": "(7,4)"
       },
       {
-        "points": null,
+        "points": 8,
         "minutes": 90,
         "goals": 0,
         "assists": 0,
         "cards": 0,
-        "comment": "(Sin calificación)"
+        "comment": "(7,6)"
       }
     ]
   },
@@ -1054,12 +1054,12 @@
         "comment": "(7,6)"
       },
       {
-        "points": null,
+        "points": 10,
         "minutes": 90,
         "goals": 0,
         "assists": 0,
         "cards": 0,
-        "comment": "(Sin calificación)"
+        "comment": "(8,1)"
       }
     ]
   },
@@ -1186,12 +1186,12 @@
         "comment": "🟨↪️ (6,7)"
       },
       {
-        "points": null,
+        "points": 3,
         "minutes": 90,
         "goals": 0,
         "assists": 0,
         "cards": 0,
-        "comment": "(Sin calificación)"
+        "comment": "(6,7)"
       }
     ]
   },
@@ -1219,12 +1219,12 @@
         "comment": "↩️ (6,7)"
       },
       {
-        "points": null,
+        "points": 3,
         "minutes": 17,
         "goals": 0,
         "assists": 0,
         "cards": 0,
-        "comment": "↩️"
+        "comment": "↩️ (6,6)"
       }
     ]
   },
@@ -1285,12 +1285,12 @@
         "comment": "(7,8)"
       },
       {
-        "points": null,
+        "points": 11,
         "minutes": 90,
         "goals": 0,
         "assists": 1,
         "cards": 0,
-        "comment": "🅰️"
+        "comment": "🅰️ (8,2+🅰️)"
       }
     ]
   },
@@ -1351,12 +1351,12 @@
         "comment": "↪️ (6,1)"
       },
       {
-        "points": null,
+        "points": 11,
         "minutes": 90,
         "goals": 0,
         "assists": 1,
         "cards": 0,
-        "comment": "🅰️"
+        "comment": "🅰️ (8,3+🅰️)"
       }
     ]
   },
@@ -1450,12 +1450,12 @@
         "comment": "No convocado"
       },
       {
-        "points": null,
+        "points": 7,
         "minutes": 90,
         "goals": 0,
         "assists": 0,
         "cards": 0,
-        "comment": "(Sin calificación)"
+        "comment": "(7,4)"
       }
     ]
   },
@@ -1483,12 +1483,12 @@
         "comment": "↪️ (6,1)"
       },
       {
-        "points": null,
+        "points": 2,
         "minutes": 10,
         "goals": 0,
         "assists": 0,
         "cards": 0,
-        "comment": "↩️"
+        "comment": "↩️ (6,4)"
       }
     ]
   },
@@ -1516,12 +1516,12 @@
         "comment": "↩️ (5,8)"
       },
       {
-        "points": null,
+        "points": -1,
         "minutes": 17,
         "goals": 0,
         "assists": 0,
         "cards": 0,
-        "comment": "↩️"
+        "comment": "↩️ (5,9)"
       }
     ]
   },
@@ -1582,12 +1582,12 @@
         "comment": "↩️ (6,1)"
       },
       {
-        "points": null,
+        "points": 1,
         "minutes": 17,
         "goals": 0,
         "assists": 0,
         "cards": 0,
-        "comment": "↩️"
+        "comment": "↩️ (6,3)"
       }
     ]
   },
@@ -1596,7 +1596,8 @@
     "name": "D. Curelea (JA)",
     "pos": "Defensa",
     "status": "OK",
-    "special": false,
+    "special": true,
+    "originTeam": "JA",
     "performances": [
       {
         "points": null,
@@ -1615,12 +1616,12 @@
         "comment": "En el JA"
       },
       {
-        "points": null,
+        "points": -9,
         "minutes": 25,
         "goals": 0,
         "assists": 0,
         "cards": 1,
-        "comment": "↩️🟨🟥"
+        "comment": "↩️🟨🟥 (5,0+🟥)"
       }
     ]
   }
@@ -1845,7 +1846,7 @@
     card.innerHTML = `
       <div class="player-header">
         <div class="player-info">
-          <div class="player-name">${p.name}${isSpecial ? ' <span class="text-xs text-gray-400"></span>' : ''}</div>
+          <div class="player-name">${p.name}</div>
           <div class="player-position ${getPositionClass(p.pos)}">${p.pos}</div>
         </div>
         <div class="player-points">
@@ -1869,7 +1870,6 @@
 
       <div>
         ${renderStatusBadge(p.status)}
-        ${isSpecial ? '<div class="mt-2 text-xs text-gray-400 italic">Jugador de otro equipo</div>' : ''}
       </div>
     `;
 
